@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Cornel Firstio | Kartu Kontak</title>
+  <title>Cornel Firstio | Visitenkarte</title>
 
   <style>
     * {
@@ -25,9 +24,9 @@
         #141418;
     }
 
-    .kartu {
+    .karte {
       width: min(100%, 460px);
-      padding: 42px 26px 30px;
+      padding: 30px 26px;
       border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 28px;
       background: rgba(30, 29, 35, 0.92);
@@ -35,7 +34,35 @@
       text-align: center;
     }
 
-    .inisial {
+    .sprachauswahl {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .sprachauswahl label {
+      color: #d2d0d7;
+      font-size: 13px;
+    }
+
+    .sprachauswahl select {
+      padding: 8px 30px 8px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 9px;
+      color: #fff;
+      background: #29252d;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .sprachauswahl select:focus-visible {
+      outline: 3px solid #e98ab2;
+      outline-offset: 2px;
+    }
+
+    .initialen {
       width: 96px;
       height: 96px;
       margin: 0 auto 22px;
@@ -54,7 +81,7 @@
       font-size: clamp(27px, 7vw, 36px);
     }
 
-    .profesi {
+    .beruf {
       margin: 10px 0 0;
       color: #e5a6c1;
       font-size: 14px;
@@ -69,12 +96,12 @@
       line-height: 1.7;
     }
 
-    .tautan {
+    .links {
       display: grid;
       gap: 13px;
     }
 
-    .tautan a {
+    .links a {
       min-height: 58px;
       padding: 15px 18px;
       display: flex;
@@ -90,21 +117,21 @@
       transition: transform 0.15s ease, background 0.15s ease;
     }
 
-    .tautan a:hover {
+    .links a:hover {
       transform: translateY(-2px);
       background: #29252d;
     }
 
-    .tautan a:focus-visible {
+    .links a:focus-visible {
       outline: 3px solid #e98ab2;
       outline-offset: 3px;
     }
 
-    .ikon {
+    .icon {
       font-size: 20px;
     }
 
-    .catatan {
+    .note {
       margin: 24px 0 0;
       color: #a9a6b0;
       font-size: 12px;
@@ -113,48 +140,122 @@
 </head>
 
 <body>
-  <main class="kartu">
-    <div class="inisial" aria-hidden="true">CF</div>
+  <main class="karte">
+    <div class="sprachauswahl">
+      <label for="language" id="language-label">Sprache</label>
+      <select id="language" aria-labelledby="language-label">
+        <option value="de">Deutsch</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div class="initialen" aria-hidden="true">CF</div>
 
     <h1>Cornel Firstio</h1>
-    <p class="profesi">Photography · Music · IT</p>
 
-    <p class="bio">
-      A photographer, singer (bass &amp; tenor), and experienced IT developer
-      with a strong background in technology and software development.
+    <p class="beruf" data-i18n="profession">
+      Fotografie · Musik · IT
     </p>
 
-    <nav class="tautan" aria-label="Kontak dan media sosial">
+    <p class="bio" data-i18n="bio">
+      Fotograf, Sänger (Bass &amp; Tenor) und erfahrener IT-Entwickler mit
+      fundiertem Hintergrund in Technologie und Softwareentwicklung.
+    </p>
 
-      <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=Seccakun2m@gmail.com"
+    <nav class="links" aria-label="Kontakt und soziale Medien" data-i18n-aria="navLabel">
+      <a href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=Seccakun2m@gmail.com"
          target="_blank" rel="noopener noreferrer">
-        <span class="ikon" aria-hidden="true">✉</span>
-        <span>Email</span>
+        <span class="icon" aria-hidden="true">✉</span>
+        <span data-i18n="email">E-Mail</span>
       </a>
 
       <a href="https://drive.google.com/drive/folders/1ovvSXXnTUaCqUX6mjyk99fXkLnzIpdGP?usp=drive_link"
          target="_blank" rel="noopener noreferrer">
-        <span class="ikon" aria-hidden="true">📷</span>
-        <span>Portfolio Fotografi</span>
+        <span class="icon" aria-hidden="true">📷</span>
+        <span data-i18n="portfolio">Fotografie-Portfolio</span>
       </a>
 
       <a href="https://wa.me/6282314487645"
          target="_blank" rel="noopener noreferrer">
-        <span class="ikon" aria-hidden="true">☏</span>
+        <span class="icon" aria-hidden="true">☏</span>
         <span>WhatsApp</span>
       </a>
 
       <a href="https://www.instagram.com/luky_bass_tenor?stkn=b3M0OXNkbW9ydXcw"
          target="_blank" rel="noopener noreferrer">
-        <span class="ikon" aria-hidden="true">◎</span>
+        <span class="icon" aria-hidden="true">◎</span>
         <span>Instagram</span>
       </a>
-
     </nav>
 
-    <p class="catatan">
-      Hubungi atau ikuti saya melalui tautan di atas.
+    <p class="note" data-i18n="note">
+      Kontaktieren oder folgen Sie mir über die Links oben.
     </p>
   </main>
+
+  <script>
+    const translations = {
+      de: {
+        title: "Cornel Firstio | Visitenkarte",
+        language: "Sprache",
+        profession: "Fotografie · Musik · IT",
+        bio: "Fotograf, Sänger (Bass & Tenor) und erfahrener IT-Entwickler mit fundiertem Hintergrund in Technologie und Softwareentwicklung.",
+        navLabel: "Kontakt und soziale Medien",
+        email: "E-Mail",
+        portfolio: "Fotografie-Portfolio",
+        note: "Kontaktieren oder folgen Sie mir über die Links oben."
+      },
+      id: {
+        title: "Cornel Firstio | Kartu Kontak",
+        language: "Bahasa",
+        profession: "Fotografi · Musik · IT",
+        bio: "Fotografer, penyanyi (bass & tenor), dan pengembang IT berpengalaman dengan latar belakang kuat di bidang teknologi dan pengembangan perangkat lunak.",
+        navLabel: "Kontak dan media sosial",
+        email: "Email",
+        portfolio: "Portofolio Fotografi",
+        note: "Hubungi atau ikuti saya melalui tautan di atas."
+      },
+      en: {
+        title: "Cornel Firstio | Contact Card",
+        language: "Language",
+        profession: "Photography · Music · IT",
+        bio: "A photographer, singer (bass & tenor), and experienced IT developer with a strong background in technology and software development.",
+        navLabel: "Contact and social media",
+        email: "Email",
+        portfolio: "Photography Portfolio",
+        note: "Contact or follow me through the links above."
+      }
+    };
+
+    const selector = document.getElementById("language");
+
+    function setLanguage(language) {
+      const copy = translations[language] || translations.de;
+
+      document.documentElement.lang = language;
+      document.title = copy.title;
+      document.getElementById("language-label").textContent = copy.language;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        element.textContent = copy[element.dataset.i18n];
+      });
+
+      document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+        element.setAttribute(
+          "aria-label",
+          copy[element.dataset.i18nAria]
+        );
+      });
+
+      selector.value = language;
+    }
+
+    selector.addEventListener("change", (event) => {
+      setLanguage(event.target.value);
+    });
+
+    setLanguage("de");
+  </script>
 </body>
 </html>
